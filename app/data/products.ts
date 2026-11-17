@@ -1,0 +1,23 @@
+export type Product = {
+  id: number;
+  slug: string;
+  brand: string;
+  name: string;
+  category: string;
+  type: string;
+  availability: string;
+  price: number | null;
+  technology: string;
+  doppler: string;
+  transducers: number;
+  image: string;
+  gallery: string[];
+  description: string;
+  promo: string | null;
+  applications: string[];
+  specs: { label: string; value: string }[];
+  accessories: string[];
+  warranty: string;
+  service: string;
+  financing: string | null;
+};
