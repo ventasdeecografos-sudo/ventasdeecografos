@@ -284,3 +284,195 @@ button:hover,
 a:hover {
   transform: translateY(-1px);
 }
+
+.theme-toggle {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: #dbeafe;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.14);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-toggle-thumb.is-dark {
+  transform: translateX(32px);
+  background: #334155;
+}
+
+@media (max-width: 399px) {
+  .theme-toggle-thumb.is-dark {
+    transform: translateX(24px);
+  }
+}
+
+.dark-theme {
+  color-scheme: dark;
+  --background: #0b1220;
+  --foreground: #e2e8f0;
+  --accent: #3b82f6;
+}
+
+.dark-theme body {
+  background: linear-gradient(180deg, #0b1220 0%, #0f172a 55%, #111c2f 100%);
+  color: var(--foreground);
+}
+
+.dark-theme header {
+  border-color: rgba(71, 85, 105, 0.7);
+  background-color: rgba(15, 23, 42, 0.92);
+}
+
+.dark-theme footer.bg-slate-950,
+.dark-theme .bg-slate-950 {
+  background-color: #080e1a;
+}
+
+.dark-theme [class~="bg-white"],
+.dark-theme [class*="bg-white/"] {
+  background-color: #111c2f;
+}
+
+.dark-theme [class~="bg-slate-50"],
+.dark-theme [class*="bg-slate-50/"] {
+  background-color: #152136;
+}
+
+.dark-theme [class~="bg-slate-100"],
+.dark-theme [class*="bg-slate-100/"] {
+  background-color: #1e293b;
+}
+
+.dark-theme [class~="bg-blue-50"],
+.dark-theme [class*="bg-blue-50/"] {
+  background-color: #172a46;
+}
+
+.dark-theme [class~="bg-blue-100"],
+.dark-theme [class*="bg-blue-100/"] {
+  background-color: #1e3a5f;
+}
+
+.dark-theme [class~="bg-red-50"],
+.dark-theme [class~="bg-amber-50"],
+.dark-theme [class~="bg-emerald-50"] {
+  background-color: #202b3d;
+}
+
+.dark-theme [class~="bg-red-100"],
+.dark-theme [class~="bg-amber-100"],
+.dark-theme [class~="bg-emerald-100"] {
+  background-color: #2a3749;
+}
+
+.dark-theme [class*="bg-[radial-gradient"] {
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.17), transparent 28%),
+    linear-gradient(135deg, #0f172a 0%, #111c2f 55%, #14233a 100%);
+}
+
+.dark-theme [class*="bg-gradient-to-r"] {
+  background-image: linear-gradient(90deg, #13223b 0%, #111c2f 52%, #0f172a 100%);
+}
+
+.dark-theme [class~="text-slate-900"] {
+  color: #f1f5f9;
+}
+
+.dark-theme [class~="text-slate-800"] {
+  color: #e2e8f0;
+}
+
+.dark-theme [class~="text-slate-700"] {
+  color: #cbd5e1;
+}
+
+.dark-theme [class~="text-slate-600"] {
+  color: #b6c3d4;
+}
+
+.dark-theme [class~="text-slate-500"] {
+  color: #94a3b8;
+}
+
+.dark-theme [class~="text-blue-900"],
+.dark-theme [class~="text-blue-800"],
+.dark-theme [class~="text-blue-700"] {
+  color: #93c5fd;
+}
+
+.dark-theme [class~="text-blue-600"] {
+  color: #bfdbfe;
+}
+
+.dark-theme [class~="text-red-900"],
+.dark-theme [class~="text-red-800"],
+.dark-theme [class~="text-amber-900"],
+.dark-theme [class~="text-amber-800"],
+.dark-theme [class~="text-emerald-900"],
+.dark-theme [class~="text-emerald-800"] {
+  color: #fca5a5;
+}
+
+.dark-theme [class~="border-slate-100"],
+.dark-theme [class~="border-slate-200"],
+.dark-theme [class~="border-slate-300"] {
+  border-color: #334155;
+}
+
+.dark-theme [class~="border-blue-100"],
+.dark-theme [class~="border-blue-200"] {
+  border-color: #2b456b;
+}
+
+.dark-theme input:not([type="checkbox"]):not([type="radio"]),
+.dark-theme textarea,
+.dark-theme select {
+  border-color: #475569;
+  background-color: #111c2f;
+  color: #f1f5f9;
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+  color: #94a3b8;
+}
+
+.dark-theme .theme-toggle {
+  border-color: #334155;
+  background-color: #111c2f;
+  color: #cbd5e1;
+}
+
+.dark-theme .premium-card {
+  background: rgba(17, 28, 47, 0.88);
+}
+
+.dark-theme .premium-card-strong {
+  background: linear-gradient(180deg, rgba(17, 28, 47, 0.98), rgba(21, 33, 54, 0.96));
+}
+
+.dark-theme .trust-chip,
+.dark-theme .brand-badge {
+  border-color: rgba(96, 165, 250, 0.28);
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.82), rgba(23, 42, 70, 0.78));
+  color: #dbeafe;
+}
+
+.dark-theme .section-shell {
+  border-color: rgba(71, 85, 105, 0.6);
+  background: rgba(17, 28, 47, 0.84);
+}
+
+.dark-theme button:focus-visible,
+.dark-theme a:focus-visible,
+.dark-theme input:focus-visible,
+.dark-theme select:focus-visible,
+.dark-theme textarea:focus-visible {
+  outline-color: #60a5fa;
+}

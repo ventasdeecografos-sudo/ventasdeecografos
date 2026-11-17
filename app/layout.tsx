@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { LanguageProvider, SiteFooter, SiteHeader } from "./components/site-shell";
+import { LanguageProvider, SiteFooter, SiteHeader, ThemeProvider } from "./components/site-shell";
 import { PwaControls } from "./components/pwa-controls";
 import "./globals.css";
 
@@ -44,12 +44,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-slate-100 text-slate-900">
-        <LanguageProvider>
-          <SiteHeader />
-          <div className="flex-1">{children}</div>
-          <SiteFooter />
-          <PwaControls />
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            <SiteHeader />
+            <div className="flex-1">{children}</div>
+            <SiteFooter />
+            <PwaControls />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
